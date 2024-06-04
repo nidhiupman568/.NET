@@ -1,0 +1,451 @@
+1. How does the .NET framework work?
+
+.NET framework-based applications that are written in supportive languages like C#, F#, or Visual basic are compiled to Common Intermediate Language (CIL).
+Compiled code is stored in the form of an assembly file that has a .dll or .exe file extension.
+When the .NET application runs, Common Language Runtime (CLR) takes the assembly file and converts the CIL into machine code with the help of the Just In Time(JIT) compiler.
+Now, this machine code can execute on the specific architecture of the computer it is running on.
+
+2. Explain about major components of the .NET framework.
+
+The major components .NET framework are given below:
+
+Common Language Runtime(CLR):
+It is an execution engine that runs the code and provides services that make the development process easier.
+Services provided by CLR are memory management, garbage collection, type safety, exception handling, security, and thread management. It also makes it easier for designing the applications and components whose objects interact across the languages.
+The programs written for the .NET Framework are executed by the CLR regardless of programming language. Every .NET Framework version is having CLR.
+
+Framework Class Library(FCL):
+It has pre-defined methods and properties to implement common and complex functions that can be used by .NET applications. It will also provide types for dates, strings, numbers, etc.
+This class library includes APIs for database connection, file reading and writing, drawing, etc.
+
+Base Class Library(BCL):
+The Base Class Library(BCL) has a huge collection of libraries features and functions that are helpful in implementing various programming languages such as C#, F#, Visual C++, etc., in the .NET Framework.
+BCL is divided into two parts. They are:
+User-defined class library: It includes Assemblies.
+Assembly: A .NET assembly is considered as the major building block of the .NET Framework. An assembly in the CLI(Common Language Infrastructure) is a logical unit of code, which is used for security, deployment, and versioning. Assembly can be defined in two forms namely Dynamic Link Library(.dll) and executable(.exe) files.
+When compilation of the .NET program takes place, metadata with Microsoft Intermediate Language(MSIL) will be generated and will be stored in a file called Assembly.
+Predefined class library: It contains namespace.
+Namespace: It is the collection of pre-defined methods and classes that are present in the .Net Framework. A namespace can be added to a .NET program with the help of "using system", where using represents a keyword and system represents a namespace.
+
+Common Type System(CTS):
+CTS specifies a standard that will mention which type of data and value can be defined and managed in memory during runtime.
+It will make sure that programming data defined in different languages should interact with each other for sharing the information. For example, in VB.NET we define datatype as integer, while in C# we define int as a data type.
+It can be used to prevent data loss when you are trying to transfer data from a type in one language to its equivalent type in another language.
+
+Common Language Specification (CLS):
+Common Language Specification (CLS) is a subset of CTS and defines a set of rules and regulations to be followed by every .NET Framework's language.
+A CLS will support inter-operability or cross-language integration, which means it provides a common platform for interacting and sharing information. For example, every programming language(C#, F#, VB .Net, etc.) under the .NET framework has its own syntax. So when statements belonging to different languages get executed, a common platform will be provided by the CLS to interact and share the information.
+
+3. What is an EXE and a DLL?
+
+EXE and DLLs are assembly executable modules.
+
+EXE is an executable file that runs the application for which it is designed. An EXE is produced when we build an application. Therefore the assemblies are loaded directly when we run an EXE. However, an EXE cannot be shared with the other applications.
+
+Dynamic Link Library (DLL) is a library that consists of code that needs to be hidden. The code is encapsulated inside this library. An application can consist of many DLLs which can be shared with the other programs and applications.
+
+4. What is CTS?
+
+CTS stands for Common Type System. It follows a set of structured rules according to which a data type should be declared and used in the program code. It is used to describe all the data types that are going to be used in the application.
+
+We can create our own classes and functions by following the rules in the CTS. It helps in calling the data type declared in one programming language by other programming languages.
+
+5. Explain CLS
+
+Common Language Specification (CLS) helps the application developers to use the components that are inter-language compatible with certain rules that come with CLS. It also helps in reusing the code among all of the .NET-compatible languages.
+
+6. What is JIT?
+
+JIT stands for Just In Time. It is a compiler that converts the intermediate code into the native language during the execution.
+
+7. What is the difference between int and Int32?
+
+There is no difference between int and Int32. Int32 is a type provided by the .NET framework class whereas int is an alias name for Int32 in the C# programming language.
+
+8. Explain the differences between value type and reference type.
+
+The main differences between value type and reference type are given below:
+
+A Value Type holds the actual data directly within the memory location and a reference type contains a pointer which consists of the address of another memory location that holds the actual data.
+Value type stores its contents on the stack memory and reference type stores its contents on the heap memory. 
+Assigning a value type variable to another variable will copy the value directly and assigning a reference variable to another doesn't copy the value, instead, it creates a second copy of the reference.
+Predefined data types, structures, enums are examples of value types. Classes, Objects, Arrays, Indexers, Interfaces, etc are examples of reference types.
+
+9. What is the difference between managed and unmanaged code?
+
+The main difference between managed and unmanaged code is listed below:
+
+Managed Code    Unmanaged Code
+It is managed by CLR.   It is not managed by CLR.
+.NET framework is a must for execution.    Does not require a .NET framework for the execution. 
+Memory management is done through garbage collection.   Runtime environment takes care of memory management.
+
+10. Explain Microsoft Intermediate Language
+
+MSIL is the Microsoft Intermediate Language, which provides instructions for calling methods, memory handling, storing and initializing values, exception handling, and so on.
+
+The instructions provided by MSIL are platform-independent and are generated by the language-specific compiler from the source code. JIT compiler compiles the MSIL into machine code based on the requirement.
+
+11. What is an assembly?
+
+An assembly is a file that is automatically generated by the compiler which consists of a collection of types and resources that are built to work together and form a logical unit of functionality. We can also say, assembly is a compiled code and logical unit of code.
+
+Assemblies are implemented in the form of executable (.exe) or dynamic link library (.dll) files.
+
+12. Is ASP.NET different from ASP? If yes, explain how?
+
+Yes, ASP.NET and ASP(Active Server Pages) both are different. Let's check how they are different from each other.
+
+ASP.NET uses .NET languages such as C# and VB.NET, which are compiled to Microsoft Intermediate Language (MSIL). ASP uses VBScript. ASP code is interpreted during the execution.
+ASP.NET which is developed by Microsoft is used to create dynamic web applications while ASP is Microsoft's server-side technology used to create web pages.
+ASP.NET is fully object-oriented but ASP is partially object-oriented.
+ASP.NET has full XML Support for easy data exchange whereas ASP has no built-in support for XML.
+ASP.NET uses the ADO.NET technology to connect and work with databases. ASP uses ADO technology.
+
+13. Explain role-based security in .NET
+
+Role-based security is used to implement security measures in .NET, based on the roles assigned to the users in the organization. In the organization, authorization of users is done based on their roles.
+
+For example, windows have role-based access like administrators, users, and guests.
+
+14. Explain the different types of assembly.
+
+Assemblies are classified into 2 types. They are:
+
+Private Assembly:
+It is accessible only to the application.
+We need to copy this private assembly, separately in all application folders where we want to use that assembly. Without copying, we cannot access the private assembly.
+It requires to be installed in the installation directory of the application.
+
+Shared or Public Assembly:
+It can be shared by multiple applications. 
+Public assembly does not require copying separately into all application folders. Only one copy of public assembly is required at the system level, we can use the same copy by multiple applications.
+It is installed in the Global Assembly Cache(GAC).
+
+15. What is the order of the events in a page life cycle?
+
+There are eight events as given below that take place in an order to successfully render a page:
+
+Page_PreInit
+Page_Init
+Page_InitComplete
+Page_PreLoad
+Page_Load
+Page_LoadComplete
+Page_PreRender
+Render
+
+16. What is a garbage collector?
+
+Garbage collector frees the unused code objects in the memory. The memory heap is partitioned into 3 generations:
+
+Generation 0: It holds short-lived objects.
+Generation 1: It stores medium-lived objects. 
+Generation 2: This is for long-lived objects.
+
+Collection of garbage refers to checking for objects in the generations of the managed heap that are no longer being used by the application. It also performs the necessary operations to reclaim their memory. The garbage collector must perform a collection in order to free some memory space.
+
+During the garbage collection process:
+
+The list of live objects is recognized.
+References are updated for the compacted objects.
+The memory space occupied by dead objects is recollected. The remaining objects are moved to an older segment.
+System.GC.Collect() method is used to perform garbage collection in .NET.
+
+17. What is caching?
+
+Caching means storing the data temporarily in the memory so that the data can be easily accessed from the memory by an application instead of searching for it in the original location. It increases the speed and performance efficiency of an application.
+
+There are three types of caching:
+
+Page caching
+Data caching 
+Fragment caching
+
+18. Can we apply themes to ASP.NET applications?
+
+Yes. By modifying the following code in the web.config file, we can apply themes to ASP.NET applications:
+
+<configuration>
+   <system.web>
+       <pages theme="windows"/>
+   </system.web>
+</configuration>
+
+19. Explain MVC.
+
+MVC stands for Model View Controller. It is an architecture to build .NET applications. Following are three main logical components of MVC: the model, the view, and the controller.
+
+Model: They hold data and its related logic. It handles the object storage and retrieval from the databases for an application. For example: A Controller object will retrieve the employee information from the database. It manipulates employee data and sends back to the database or uses it to render the same data.
+
+View: View handles the UI part of an application. They get the information from the models for their display. For example, any employee view will include many components like text boxes, dropdowns, etc.
+
+Controller: They handle the user interactions, figure out the responses for the user input and also render the final output. For instance, the Employee controller will handle all the interactions and inputs from the Employee View and update the database using the Employee Model.
+
+20. What is cross-page posting?
+
+Whenever we click on a submit button on a webpage, the data is stored on the same page. But if the data is stored on a different page and linked to the current one, then it is known as a cross-page posting. Cross-page posting is achieved by POSTBACKURL property.
+
+To get the values that are posted on this page to which the page has been posted, the FindControl method can be used.
+
+21. What is a delegate in .NET?
+
+A delegate is a .NET object which defines a method signature and it can pass a function as a parameter.
+
+Delegate always points to a method that matches its specific signature. Users can encapsulate the reference of a method in a delegate object.
+
+When we pass the delegate object in a program, it will call the referenced method. To create a custom event in a class, we can make use of delegate.
+
+22. What are security controls available on ASP.NET?
+
+Following are the five security controls available on ASP.NET:
+
+<asp: Login> Provides a login capability that enables the users to enter their credentials with ID and password fields.
+<asp: LoginName> Used to display the user name who has logged-in.  
+<asp: LoginView> Provides a variety of views depending on the template that has been selected.
+<asp: LoginStatus> Used to check whether the user is authenticated or not.
+<asp: PasswordRecovery> Sends an email to a user while resetting the password.
+
+23. What is boxing and unboxing in .NET?
+
+Boxing is the process of converting a value type into a reference type directly. Boxing is implicit.
+
+Unboxing is the process where reference type is converted back into a value type. Unboxing is explicit.
+
+An example is given below to demonstrate boxing and unboxing operations:
+
+int a = 10;      // a value type
+object o = a;     // boxing  
+int b = (int)o;   // unboxing
+
+24. What is MIME in .NET?
+
+MIME stands for Multipurpose Internet Mail Extensions. It is the extension of the e-mail protocol which lets users use the protocol to exchange files over emails easily.
+
+Servers insert the MIME header at the beginning of the web transmission to denote that it is a MIME transaction.
+
+Then the clients use this header to select an appropriate 'player' for the type of data that the header indicates. Some of these players are built into the web browser.
+
+25. What is the use of manifest in the .NET framework?
+
+Manifest stores the metadata of the assembly. It contains metadata which is required for many things as given below:
+
+Assembly version information.
+Scope checking of the assembly.
+Reference validation to classes.
+Security identification.
+
+26. Explain different types of cookies available in ASP.NET?
+
+Two types of cookies are available in ASP.NET. They are:
+
+Session Cookie: It resides on the client machine for a single session and is valid until the user logs out.
+
+Persistent Cookie: It resides on the user machine for a period specified for its expiry. It may be an hour, a day, a month, or never.
+
+27. What is the meaning of CAS in .NET?
+
+Code Access Security(CAS) is necessary to prevent unauthorized access to programs and resources in the runtime. It is designed to solve the issues faced when obtaining code from external sources, which may contain bugs and vulnerabilities that make the user's system vulnerable.
+
+CAS gives limited access to code to perform only certain operations instead of providing all at a given point in time. CAS constructs a part of the native .NET security architecture.
+
+28. What is the appSettings section in the web.config file?  
+
+We can use the appSettings block in the web.config file, if we want to set the user-defined values for the whole application. Example code given below will make use of ConnectionString for the database connection throughout the project:
+
+<configuration>
+   <appSettings>
+       <add key= "ConnectionString" value="server=local; pwd=password; database=default"  />
+   </appSettings>
+</configuration>
+
+29. What is the difference between an abstract class and an interface?
+
+The main difference between an abstract class and an interface are listed below:
+
+Abstract Class                     Interface
+Used to declare properties, events, methods, and fields as well. Fields cannot be declared using interfaces.
+Provides the partial implementation of functionalities that must be implemented by inheriting classes.   Used to declare the behavior of an implementing class.
+Different kinds of access modifiers like private, public, protected, etc. are supported.    Only public access modifier is supported.
+It can contain static members.   It does not contain static members.
+Multiple inheritances cannot be achieved.    Multiple inheritances are achieved.  
+
+30. What are the types of memories supported in the .NET framework?
+
+Two types of memories are present in .NET. They are:
+
+Stack: Stack is a stored-value type that keeps track of each executing thread and its location. It is used for static memory allocation.
+
+Heap: Heap is a stored reference type that keeps track of the more precise objects or data. It is used for dynamic memory allocation.
+
+31. Explain localization and globalization.
+
+Localization is the process of customizing our application to behave as per the current culture and locale.  
+
+Globalization is the process of designing the application so that it can be used by users from across the globe by supporting multiple languages.
+
+32. What are the parameters that control the connection pooling behaviors?
+
+There are 4 parameters that control the connection pooling behaviours. They are:
+
+Connect Timeout
+Min Pool Size
+Max Pool Size
+Pooling
+
+33. What are MDI and SDI?
+
+MDI (Multiple Document Interface): An MDI allows you to open multiple windows, it will have one parent window and as many child windows. The components are shared from the parent window like toolbar, menubar, etc.
+
+SDI (Single Document Interface): SDI opens each document in a separate window. Each window has its own components like a toolbar, menubar, etc. Therefore it is not constrained to the parent window.
+
+34. Explain the different parts of an Assembly.  
+
+The different parts of an assembly are:
+
+Manifest – Every static or dynamic assembly holds a data collection that gives details about how the elements in the assembly relate to each other. An assembly manifest consists of complete metadata required to specify version requirements and security identity of an assembly, and also the metadata required for defining the assembly scope and resolving references to classes and resources.
+
+Type Metadata – Metadata gives you additional information such as types, type names, method names, etc about the contents of an assembly. Metadata will be automatically generated by the Compilers from the source files and the compiler will embed this metadata within target output files like .exe, .dll, or a .netmodule(in the case of multi-module assembly).
+
+MSIL – Microsoft Intermediate Language(MSIL) is a code that implements the types. It includes instructions to load, store, initialize, and call the methods on objects. Along with this, it also includes instructions for control flow, direct memory access, arithmetic and logical operations, exception handling, etc. 
+
+Resources – Resources can be a list of related files such as .bmp or .jpg files. These resources are static, which means they do not change during run time. Resources are not executable items.
+
+
+
+
+
+.NET CORE INTERVIEW QUESTIONS
+
+
+
+
+14. What is MSBuild in the .NET Core?
+
+MSBuild is the free and open-source development platform for Visual Studio and Microsoft. It is a build tool that is helpful in automating the software product creation process, along with source code compilation, packaging, testing, deployment, and documentation creation. Using MSBuild, we can build Visual Studio projects and solutions without the need of installing the Visual Studio IDE.
+
+In the Universal Windows Platform(UWP) app, if you open the folder named project, you will get to see both files namely project.json and *.csproj. But if you open our previous Console application in .NET Core, you will get to see project.json and *.xproj files.
+
+15. What are Universal Windows Platform(UWP) Apps in .Net Core?  
+
+Universal Windows Platform(UWP) is one of the methods used to create client applications for Windows. UWP apps will make use of WinRT APIs for providing powerful UI as well as features of advanced asynchronous that are ideal for devices with internet connections.
+
+Features of UWP apps:
+
+Secure: UWP apps will specify which resources of device and data are accessed by them.
+It is possible to use a common API on all devices(that run on Windows 10).
+It enables us to use the specific capabilities of the device and adapt the user interface(UI) to different device screen sizes, DPI(Dots Per Inches), and resolutions.
+It is available on the Microsoft Store on all or specified devices that run on Windows 10.
+We can install and uninstall these apps without any risk to the machine/incurring "machine rot".
+Engaging: It uses live tiles, user activities, and push notifications, that interact with the Timeline of Windows as well as with Cortana's Pick Up Where I Left Off, for engaging users.
+It can be programmable in C++, C#, Javascript, and Visual Basic. For UI, you can make use of WinUI, HTML, XAML, or DirectX.
+
+16. Explain about .NET Core Components.
+
+The .NET Core Framework is composed of the following components:
+
+CLI Tools: Command Line Interface(CLI) tools is a cross-platform tool for developing, building, executing, restoring packages, and publishing. It is also capable of building Console applications and class libraries that can run on the entire .NET framework. 
+
+Roslyn(.NET Compiler platform): It is a set of an open-source language compiler and also has code analysis API for the C# and Visual Basic (VB.NET) programming languages. Roslyn exposes modules for dynamic compilation to Common Intermediate Language(CLI), syntactic (lexical) and semantic code analysis, and also code emission.
+
+CoreFX: CoreFX is a set of framework libraries. It consists of the new BCL(Base Class Library) i.e. System.* things like System.Xml, System.Collections, etc. 
+
+CoreCLR: A JIT(Just In Time) based CLR (Command Language Runtime). CoreCLR is the runtime implementation that runs on cross-platform and has the GC, RyuJIT, native interop, etc.
+
+17. What is middleware in .NET core?
+
+Middleware is software assembled into an application pipeline for request and response handling. Each component will choose whether the request should be passed to the next component within the pipeline, also it can carry out work before and after the next component within the pipeline.
+
+For example, we can have a middleware component for user authentication, another middleware for handling errors, and one more middleware for serving static files like JavaScript files, images, CSS files, etc.
+
+It can be built-in into the .NET Core framework, which can be added through NuGet packages. These middleware components are built as part of the configure method's application startup class. In the ASP.NET Core application, these Configure methods will set up a request processing pipeline. It contains a sequence of request delegates that are called one after another.
+
+Normally, each middleware will handle the incoming requests and passes the response to the next middleware for processing. A middleware component can take the decision of not calling the next middleware in the pipeline. This process is known as short-circuiting the pipeline or terminating the request pipeline. This process is very helpful as it avoids unnecessary work. For example, if the request is made for a static file such as a CSS file, image, or JavaScript file, etc., these static files middleware can process and serve the request and thus short-circuit the remaining pipeline.
+
+Here are the questions 18 to 27 with their solutions, with each solution written on a new line:
+
+18. Differentiate .NET Core vs .NET framework.
+
+Features	.NET Core	.NET framework
+Compatibility	It works based on the principle of "build once, run anywhere". It is cross-platform, so it is compatible with different operating systems such as Linux, Windows, and Mac OS.	This framework is compatible with the Windows operating system only. Even though, it was developed for supporting software and applications on all operating systems.
+Installation	Since it is cross-platform, it is packaged and installed independently of the OS.	It is installed in the form of a single package for Windows OS.
+Application Models	It does not support developing the desktop application and it focuses mainly on the windows mobile, web, and windows store.	It is used for developing both desktop and web applications, along with that it also supports windows forms and WPF applications.
+Performance and Scalability	It provides high performance and scalability.	It is less effective compared to .Net Core in terms of performance as well as scalability of applications.
+Support for Micro-Services and REST Services	It supports developing and implementing the micro-services and the user is required to create a REST API for its implementation.	It does not support the microservices' development and implementation, but it supports REST API services.
+Packaging and Shipping	It is shipped as a collection of Nugget packages.	All the libraries that belong to the .Net Framework are packaged and shipped all at once.
+Android Development	It is compatible with open-source mobile app platforms like Xamarin, via .NET Standard Library. Developers can make use of tools of Xamarin for configuring the mobile application for particular mobile devices like Android, iOS, and Windows phones.	It does not support the development of mobile applications.
+CLI Tools	For all supported platforms, it provides lightweight editors along with command-line tools.	This framework is heavy for CLI(Command Line Interface) and developers usually prefer to work on the lightweight CLI.
+Deployment Model	Updated version of the .NET Core gets initiated on one machine at a time, which means it gets updated in new folders/directories in the existing application without affecting it. Thus, we can say that .NET Core has a very good flexible deployment model.	When the updated version is released, it is deployed only on the Internet Information Server at first.
+
+19. Explain Explicit Compilation (Ahead Of Time compilation).
+
+Ahead-of-time(AOT) compilation is the process of compiling a high-level language into a low-level language during build-time, i.e., before program execution. AOT compilation reduces the workload during run time.
+
+AOT provides faster start-up time, in larger applications where most of the code executes on startup. But it needs more amount of disk space and memory or virtual address space to hold both IL(Intermediate Language) and precompiled images. In this case, the JIT(Just In Time) Compiler will do a lot of work like disk I/O actions, which are expensive.
+
+The explicit compilation will convert the upper-level language into object code on the execution of the program. Ahead of time(AOT) compilers are designed for ensuring whether the CPU will understand line-by-line code before doing any interaction with it.
+
+Ahead-of-Time (AOT) compilation happens only once during build time and it does not require shipping the HTML templates and the Angular compiler into the bundle. The source code generated can begin running immediately after it has been downloaded into the browser, earlier steps are not required. The AOT compilation will turn the HTML template into the runnable code fragment. AOT will analyze and compile our templates statically during build time.
+
+Benefits of AOT Compilation:
+- Application size is smaller because the Compiler itself isn't shipped and unused features can be removed.
+- Template the parse errors that are detected previously(during build time) 
+- Security is high (not required to dynamically evaluate templates)
+- Rendering of a component is faster (pre-compiled templates)
+- For AOT compilation, some tools are required to accomplish it automatically in the build process.
+
+20. What is MEF?
+
+The MEF(Managed Extensibility Framework) is a library that is useful for developing extensible and lightweight applications. It permits application developers for using extensions without the need for configuration. It also allows extension developers for easier code encapsulation and thus avoiding fragile hard dependencies. MEF will let you reuse the extensions within applications, as well as across the applications. It is an integral part of the .NET Framework 4. It improves the maintainability, flexibility, and testability of large applications.
+
+21. In what situations .NET Core and .NET Standard Class Library project types will be used?
+
+.NET Core library is used if there is a requirement to increase the surface area of the .NET API which your library will access, and permit only applications of .NET Core to be compatible with your library if you are okay with it.
+
+.NET Standard library will be used in case you need to increase the count of applications that are compatible with your library and reduce surface area(a piece of code that a user can interact with) of the .NET API which your library can access if you are okay with it.
+
+22. What is CoreRT?
+
+CoreRT is the native runtime for the compilation of .NET natively ahead of time and it is a part of the new .NET Native (as announced in April 2014).
+It is not a virtual machine and it does not have the facility of generating and running the code on the fly as it doesn't include a JIT. It has the ability for RTTI(run-time type identification) and reflection, along with that it has GC(Garbage Collector).
+The type system of the CoreRT is designed in such a way that metadata for reflection is not at all required. This feature enables to have an AOT toolchain that can link away unused metadata and can identify unused application code.
+
+23. What is .NET Core SDK?
+
+.NET Core SDK is a set of tools and libraries that allows the developer to create a .NET application and library for .NET 5 (also .NET Core) and later versions. It includes the .NET CLI for building applications, .NET libraries and runtime for the purpose of building and running apps, and the dotnet.exe(dotnet executable) that runs CLI commands and runs an application. Here's the link to download.
+
+24. What is Docker?
+
+Docker is an open-source platform for the development of applications, and also for shipping and running them. It allows for separating the application from the infrastructure using containers so that software can be delivered quickly. With Docker, you will be able to manage the infrastructure in the same ways you used to manage your applications.
+
+It supports shipping, testing, and deploying application code quickly, thus reducing the delay between code writing and running it in production.
+
+The Docker platform provides the ability of packaging and application execution in a loosely isolated environment namely container. The isolation and security permit you for running multiple containers at the same time on a given host. Containers are lightweight and they include every necessary thing required for running an application, so you need not depend on what is currently installed within the host.
+
+25. What is Xamarin?
+
+Xamarin is an open-source platform useful in developing a modern and efficient application for iOS, Android, and Windows with .NET. It is an abstraction layer used to manage the communication of shared code with fundamental platform code.
+
+Xamarin runs in a managed environment that gives benefits like garbage collection and memory allocation.
+
+Developers can share about 90% of their applications over platforms using Xamarin. This pattern permits developers for writing entire business logic in a single language (or reusing existing app code) but accomplish native performance, look and feel on each platform. The Xamarin applications can be written on Mac or PC and then they will be compiled into native application packages, like a .ipa file on iOS, or .apk file on Android.
+
+26. How can you differentiate ASP.NET Core from .NET Core?
+
+.NET Core is a runtime and is used for the execution of an application that is built for it. Whereas ASP.NET Core is a collection of libraries that will form a framework for developing web applications. ASP.NET Core libraries can be used on .NET Core as well as on the "Full .NET Framework".
+
+An application using the tools and libraries of ASP.NET Core is normally referred to as "ASP.NET Core Application", which in theory doesn't say whether it is built for .NET Framework or .NET Core. So an application of "ASP.NET Core" can be considered as a ".NET Core Application" or a ".NET Framework Application".
+
+27. Write a program to calculate the addition of two numbers.
+
+The steps are as follows:
+
+1. You need to create a new ASP.NET Core Project "CalculateSum". Open Visual Studio 2015, goto File–> New–> Project. Select the option Web in Left Pane and go for the option ASP.NET Core Web Application (.NET Core) under the central pane. Edit the project name as "CalculateSum" and click on OK.
+
+2. In the template window, select Web Application and set the Authentication into "No Authentication" and click on OK. 
+
+3. Open "Solution Explorer" and right-click
+
+
+
+
